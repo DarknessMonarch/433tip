@@ -1,0 +1,113 @@
+import { Toaster } from "react-hot-toast";
+import Script from "next/script";
+import "@/app/styles/global.css";
+import {
+  OutfitBlack,
+  OutfitBold,
+  OutfitExtraBold,
+  OutfitExtraLight,
+  OutfitLight,
+  OutfitMedium,
+  OutfitRegular,
+  OutfitSemiBold,
+  OutfitThin,
+} from "@/app/fonts/font";
+
+
+export const metadata = {
+  metadataBase: new URL("https://www.433tips.com/"),
+  title: "433Tips - Sports Betting Predictions & Tips",
+  applicationName: "433tip",
+  author: "433tip",
+  images:
+    "https://raw.githubusercontent.com/zero-stealth/433Tips/master/src/assets/banner.png",
+  description:
+    "Get expert sports betting predictions and tips on football, soccer, basketball, and more at 433Tips. Join us for winning insights and tips to boost your betting game.",
+  metadataBase: new URL("https://www.433tips.com/"),
+  keywords: [
+    "433Tips",
+    "sports betting",
+    "predictions",
+    "tips",
+    "football",
+    "soccer",
+    "basketball",
+    " betting strategies",
+  ],
+  openGraph: {
+    title: "433Tips - Sports Betting Predictions & Tips",
+    description:
+      "Get expert sports betting predictions and tips on football, soccer, basketball, and more at 433Tips. Join us for winning insights and tips to boost your betting game.",
+    url: "https://www.433tips.com//",
+    siteName: "433tip",
+    images:
+      "https://raw.githubusercontent.com/zero-stealth/433Tips/master/src/assets/banner.png",
+  },
+  robots: {
+    index: false,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: false,
+      noimageindex: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <head>
+        <Script
+          async
+          src="https://www.paypal.com/sdk/js?client-id=AecSsqZBM68JtGP4BOA4Agcdk4vDGldQJwYoU83Ig4VM7ItL6Tou_wVnixLw2d0ouZf2ap30kjv4dB-J"
+        ></Script>
+
+        {/* Google tag (gtag.js)  */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-DWYY7ECRV7"
+        ></Script>
+        <Script id="google-analytics">
+          {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', ${"${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}"});
+          `}
+        </Script>
+      </head>
+      <body className={`
+      ${OutfitBlack.variable}
+       ${OutfitBold.variable} 
+       ${OutfitExtraBold.variable}
+        ${OutfitExtraLight.variable}
+         ${OutfitLight.variable} 
+         ${OutfitMedium.variable} 
+         ${OutfitRegular.variable} 
+         ${OutfitSemiBold.variable}
+          ${OutfitThin.variable}`}>
+             <Toaster
+          position="top-right"
+          reverseOrder={false}
+          gutter={8}
+          containerClassName=""
+          containerStyle={{}}
+          toastOptions={{
+            className: "",
+            duration: 8000,
+            style: {
+              background: "#09122eff",
+              color: "#6cd7ffff",
+            },
+          }}
+        />
+        {children}
+      </body>
+    </html>
+  );
+}
