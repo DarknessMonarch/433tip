@@ -15,17 +15,17 @@ import {
 
 
 export const metadata = {
-  metadataBase: new URL("https://www.433tips.com/"),
-  title: "433Tips - Sports Betting Predictions & Tips",
+  metadataBase: new URL("https://www.tips90prediction.com/"),
+  title: "tips90prediction - Sports Betting Predictions & Tips",
   applicationName: "433tip",
   author: "433tip",
   images:
-    "https://raw.githubusercontent.com/zero-stealth/433Tips/master/src/assets/banner.png",
+    "https://raw.githubusercontent.com/DarknessMonarch/433tip/refs/heads/master/public/assets/banner.png",
   description:
-    "Get expert sports betting predictions and tips on football, soccer, basketball, and more at 433Tips. Join us for winning insights and tips to boost your betting game.",
-  metadataBase: new URL("https://www.433tips.com/"),
+    "Get expert sports betting predictions and tips on football, soccer, basketball, and more at tips90prediction. Join us for winning insights and tips to boost your betting game.",
+  metadataBase: new URL("https://www.tips90prediction.com/"),
   keywords: [
-    "433Tips",
+    "tips90prediction",
     "sports betting",
     "predictions",
     "tips",
@@ -35,13 +35,13 @@ export const metadata = {
     " betting strategies",
   ],
   openGraph: {
-    title: "433Tips - Sports Betting Predictions & Tips",
+    title: "tips90prediction - Sports Betting Predictions & Tips",
     description:
-      "Get expert sports betting predictions and tips on football, soccer, basketball, and more at 433Tips. Join us for winning insights and tips to boost your betting game.",
-    url: "https://www.433tips.com//",
+      "Get expert sports betting predictions and tips on football, soccer, basketball, and more at tips90prediction. Join us for winning insights and tips to boost your betting game.",
+    url: "https://www.tips90prediction.com//",
     siteName: "433tip",
     images:
-      "https://raw.githubusercontent.com/zero-stealth/433Tips/master/src/assets/banner.png",
+      "https://raw.githubusercontent.com/DarknessMonarch/433tip/refs/heads/master/public/assets/banner.png",
   },
   robots: {
     index: false,
