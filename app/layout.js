@@ -15,15 +15,15 @@ import {
 
 
 export const metadata = {
-  metadataBase: new URL("https://www.tips90prediction.com/"),
+  metadataBase: new URL("https://tips90prediction.vercel.app/"),
   title: "tips90prediction - Sports Betting Predictions & Tips",
   applicationName: "433tip",
   author: "433tip",
   images:
     "https://raw.githubusercontent.com/DarknessMonarch/433tip/refs/heads/master/public/assets/banner.png",
   description:
-    "Get expert sports betting predictions and tips on football, soccer, basketball, and more at tips90prediction. Join us for winning insights and tips to boost your betting game.",
-  metadataBase: new URL("https://www.tips90prediction.com/"),
+    "Welcome to Tips90predict, your go-to source for precise sports betting predictions. Our expertise lies in football, basketball, and tennis..",
+  metadataBase: new URL("https://tips90prediction.vercel.app/"),
   keywords: [
     "tips90prediction",
     "sports betting",
@@ -37,8 +37,8 @@ export const metadata = {
   openGraph: {
     title: "tips90prediction - Sports Betting Predictions & Tips",
     description:
-      "Get expert sports betting predictions and tips on football, soccer, basketball, and more at tips90prediction. Join us for winning insights and tips to boost your betting game.",
-    url: "https://www.tips90prediction.com//",
+      "Welcome to Tips90predict, your go-to source for precise sports betting predictions. Our expertise lies in football, basketball, and tennis..",
+    url: "https://tips90prediction.vercel.app//",
     siteName: "433tip",
     images:
       "https://raw.githubusercontent.com/DarknessMonarch/433tip/refs/heads/master/public/assets/banner.png",

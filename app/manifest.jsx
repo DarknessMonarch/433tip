@@ -1,8 +1,8 @@
 export default function manifest() {
     return {
-      name: '433Tips',
-      short_name: '433Tips',
-      description: 'Get expert sports betting predictions and tips on football, soccer, basketball, and more at 433Tips. Join us for winning insights and tips to boost your betting game.',
+      name: 'tips90prediction',
+      short_name: 'tips90prediction',
+      description: 'Welcome to Tips90predict, your go-to source for precise sports betting predictions. Our expertise lies in football, basketball, and tennis.',
       start_url: '/' || '/page/home',
       display: 'standalone',
       background_color: '#09122eff',
