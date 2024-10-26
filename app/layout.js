@@ -2,15 +2,15 @@ import { Toaster } from "react-hot-toast";
 import Script from "next/script";
 import "@/app/styles/global.css";
 import {
-  OutfitBlack,
-  OutfitBold,
-  OutfitExtraBold,
-  OutfitExtraLight,
-  OutfitLight,
-  OutfitMedium,
-  OutfitRegular,
-  OutfitSemiBold,
-  OutfitThin,
+  PoppinsBlack,
+  PoppinsBold,
+  PoppinsExtraBold,
+  PoppinsExtraLight,
+  PoppinsLight,
+  PoppinsMedium,
+  PoppinsRegular,
+  PoppinsSemiBold,
+  PoppinsThin,
 } from "@/app/fonts/font";
 
 
@@ -82,16 +82,16 @@ export default function RootLayout({ children }) {
         </Script>
       </head>
       <body className={`
-      ${OutfitBlack.variable}
-       ${OutfitBold.variable} 
-       ${OutfitExtraBold.variable}
-        ${OutfitExtraLight.variable}
-         ${OutfitLight.variable} 
-         ${OutfitMedium.variable} 
-         ${OutfitRegular.variable} 
-         ${OutfitSemiBold.variable}
-          ${OutfitThin.variable}`}>
-             <Toaster
+      ${PoppinsBlack.variable}
+       ${PoppinsBold.variable} 
+       ${PoppinsExtraBold.variable}
+        ${PoppinsExtraLight.variable}
+         ${PoppinsLight.variable} 
+         ${PoppinsMedium.variable} 
+         ${PoppinsRegular.variable} 
+         ${PoppinsSemiBold.variable}
+          ${PoppinsThin.variable}`}>
+        <Toaster
           position="top-right"
           reverseOrder={false}
           gutter={8}

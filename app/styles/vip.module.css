@@ -1,5 +1,5 @@
 @media screen {
-  .footballContainer {
+  .vipContainer {
     gap: 20px;
     height: 100%;
     display: flex;
@@ -16,20 +16,80 @@
     display: grid;
     overflow: hidden;
     overflow-y: auto;
+    min-height: 600px;
     overflow-x: hidden;
+  }
+
+  .defaultContainer {
+    gap: 20px;
+    height: 100%;
+    widows: 100%;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .defaultContain {
+    gap: 30px;
+    display: flex;
+    padding: 20px;
+    border-radius: 15px;
+    flex-direction: column;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background-image: var(--background-image);
+    border: 1px solid var(--primary-light-color);
+  }
+
+  .defaultContain h1 {
+    font-size: 1.2rem;
+    text-align: center;
+    font-family: var(--font-outfit-extralight);
+  }
+
+  .defaultButton {
+    height: 40px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 15px;
+    background: transparent;
+    color: var(--tertiary-color);
+    border: 1px solid var(--tertiary-color);
+  }
+
+  .defaultButton:hover {
+    color: var(--primary-color);
+    background-color: var(--tertiary-color);
+  }
+
+  /* when their is no data  */
+  .emptyCard {
+    width: 100%;
+    min-width: 0;
+    height: 350px;
+    border-radius: 15px;
+    border: 1px solid var(--primary-light-color);
   }
 }
 
 /* using it as global style for larger devices  */
 @media only screen and (min-width: 48em) {
   .content {
+    min-height: auto;
     grid-template-columns: repeat(2, minmax(300px, 1fr));
+  }
+
+  .emptyCard {
+    height: 410px;
   }
 }
 
 /* ipad pro screens & laptop */
 @media only screen and (min-width: 49em) and (max-width: 64em) {
   .content {
+    min-height: auto;
     grid-template-columns: repeat(2, minmax(300px, 1fr));
   }
 }

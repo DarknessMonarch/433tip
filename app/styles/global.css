@@ -44,7 +44,7 @@
     background-attachment: fixed;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    font-family: var(--font-outfit-extralight);
+    font-family: var(--font-poppins-regular);
     background-image: var(--background-image);
   }
 
@@ -105,7 +105,7 @@
   );
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
-  background-color: var(--light-color);
+  background-image: var(--background-image);
 }
 
 @keyframes shimmer {

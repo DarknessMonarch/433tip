@@ -1,69 +1,69 @@
 import localFont from "next/font/local";
 
-const OutfitBlack = localFont({
-    src: "./Outfit-Black.woff",
-    variable: "--font-outfit-black",
+const PoppinsBlack = localFont({
+    src: "./Poppins-Black.woff",
+    variable: "--font-poppins-black",
     weight: "900",
 });
 
-const OutfitBold = localFont({
-    src: "./Outfit-Bold.woff",
-    variable: "--font-outfit-bold",
+const PoppinsBold = localFont({
+    src: "./Poppins-Bold.woff",
+    variable: "--font-poppins-bold",
     weight: "700",
 });
 
-const OutfitExtraBold = localFont({
-    src: "./Outfit-ExtraBold.woff",
-    variable: "--font-outfit-extrabold",
+const PoppinsExtraBold = localFont({
+    src: "./Poppins-ExtraBold.woff",
+    variable: "--font-poppins-extrabold",
     weight: "800",
 });
 
-const OutfitExtraLight = localFont({
-    src: "./Outfit-ExtraLight.woff",
-    variable: "--font-outfit-extralight",
+const PoppinsExtraLight = localFont({
+    src: "./Poppins-ExtraLight.woff",
+    variable: "--font-poppins-extralight",
     weight: "200",
 });
 
-const OutfitLight = localFont({
-    src: "./Outfit-Light.woff",
-    variable: "--font-outfit-light",
+const PoppinsLight = localFont({
+    src: "./Poppins-Light.woff",
+    variable: "--font-poppins-light",
     weight: "300",
 });
 
 
-const OutfitMedium = localFont({
-    src: "./Outfit-Medium.woff",
-    variable: "--font-outfit-medium",
+const PoppinsMedium = localFont({
+    src: "./Poppins-Medium.woff",
+    variable: "--font-poppins-medium",
     weight: "500",
 });
 
 
-const OutfitRegular = localFont({
-    src: "./Outfit-Regular.woff",
-    variable: "--font-outfit-regular",
+const PoppinsRegular = localFont({
+    src: "./Poppins-Regular.woff",
+    variable: "--font-poppins-regular",
     weight: "400",
 });
 
-const OutfitSemiBold = localFont({
-    src: "./Outfit-SemiBold.woff",
-    variable: "--font-outfit-semibold",
+const PoppinsSemiBold = localFont({
+    src: "./Poppins-SemiBold.woff",
+    variable: "--font-poppins-semibold",
     weight: "600",
 });
 
-const OutfitThin = localFont({
-    src: "./Outfit-Thin.woff",
-    variable: "--font-outfit-thin",
+const PoppinsThin = localFont({
+    src: "./Poppins-Thin.woff",
+    variable: "--font-poppins-thin",
     weight: "100",
 });
 
 export {
-    OutfitBlack,
-    OutfitBold,
-    OutfitExtraBold,
-    OutfitExtraLight,
-    OutfitLight,
-    OutfitMedium,
-    OutfitRegular,
-    OutfitSemiBold,
-    OutfitThin,
+    PoppinsBlack,
+    PoppinsBold,
+    PoppinsExtraBold,
+    PoppinsExtraLight,
+    PoppinsLight,
+    PoppinsMedium,
+    PoppinsRegular,
+    PoppinsSemiBold,
+    PoppinsThin,
 }

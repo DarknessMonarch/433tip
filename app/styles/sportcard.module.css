@@ -209,7 +209,7 @@
 @media only screen and (min-width: 48em) {
   .cardContainer {
     width: 100%;
-    min-height: 410px;
+    min-height: 420px;
   }
 
   .cardWrapper {

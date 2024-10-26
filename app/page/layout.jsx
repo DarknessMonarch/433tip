@@ -1,17 +1,18 @@
-import styles from '@/app/styles/pageLayout.module.css';
-import SideNav from '@/app/components/SideNav';
-import NavBar from '@/app/components/Navbar';
+"use client";
+
+import styles from "@/app/styles/pageLayout.module.css";
+import SideNav from "@/app/components/SideNav";
+import NavBar from "@/app/components/NavBar";
 
 export default function PageLayout({ children }) {
 
   return (
-    <div className={styles.layoutMain}>
+    <div className={styles.layoutMain} >
       <SideNav />
       <div className={styles.content}>
-        <NavBar/>
+        <NavBar />
         {children}
       </div>
     </div>
-
   );
 }

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { useAuthStore } from "@/app/store/Auth";
 import { useEffect, useState } from "react";
 import LogoImg from "@/public/assets/logo.png";
 import { useDrawerStore } from "@/app/store/Drawer";
@@ -22,6 +23,7 @@ import {
   PiCourtBasketball as OtherSportIcon,
   PiTelegramLogo as TelegramLogo,
 } from "react-icons/pi";
+import { WiDayCloudy as BankerIcon } from "react-icons/wi";
 
 import { RiMenu4Fill as MenuIcon } from "react-icons/ri";
 
@@ -29,6 +31,7 @@ export default function SideNav() {
   const { isOpen, toggleOpen } = useDrawerStore();
   const [isMobile, setIsMobile] = useState(false);
   const pathname = usePathname();
+  const { isAuth, toggleAuth } = useAuthStore();
 
   useEffect(() => {
     const handleResize = () => {
@@ -51,7 +54,7 @@ export default function SideNav() {
   }`;
 
   const openTelegram = () => {
-    window.open("https://t.me/433tips", "_blank");
+    window.open("https://t.me/+p9eRLjKRtv45Y2Fk", "_blank");
   };
 
   return (
@@ -75,23 +78,26 @@ export default function SideNav() {
         />
       </div>
       <div className={styles.sideTop}>
-      <Link href="/page/dashboard" className={styles.sideLink}>
-          <div
-            className={`${styles.innerSideLink} ${
-              pathname === "/page/dashboard" ||
-              pathname.startsWith("/page/dashboard/")
-                ? styles.activeLink
-                : ""
-            }`}
-          >
-            <DashboardIcon
-              alt="dashboard icon"
-              aria-label="dashboard icon"
-              className={styles.linkIcon}
-            />
-            <h1>Dashboard</h1>
-          </div>
-        </Link>
+        {isAuth && (
+          <Link href="/page/dashboard" className={styles.sideLink}>
+            <div
+              className={`${styles.innerSideLink} ${
+                pathname === "/page/dashboard" ||
+                pathname.startsWith("/page/dashboard/")
+                  ? styles.activeLink
+                  : ""
+              }`}
+            >
+              <DashboardIcon
+                alt="dashboard icon"
+                aria-label="dashboard icon"
+                className={styles.linkIcon}
+              />
+              <h1>Dashboard</h1>
+            </div>
+          </Link>
+        )}
+
         <Link href="/page/football" className={styles.sideLink}>
           <div
             className={`${styles.innerSideLink} ${
@@ -101,12 +107,29 @@ export default function SideNav() {
                 : ""
             }`}
           >
+            <BankerIcon
+              alt="straight icon"
+              aria-label="straight icon"
+              className={styles.linkIcon}
+            />
+            <h1>Banker of the day</h1>
+          </div>
+        </Link>
+        <Link href="/page/straight" className={styles.sideLink}>
+          <div
+            className={`${styles.innerSideLink} ${
+              pathname === "/page/straight" ||
+              pathname.startsWith("/page/straight/")
+                ? styles.activeLink
+                : ""
+            }`}
+          >
             <FootballIcon
               alt="football icon"
               aria-label="football icon"
               className={styles.linkIcon}
             />
-            <h1>Football</h1>
+            <h1>Straight win</h1>
           </div>
         </Link>
         <Link href="/page/otherSport" className={styles.sideLink}>
@@ -156,7 +179,6 @@ export default function SideNav() {
             <h1>How to pay</h1>
           </div>
         </Link>
- 
 
         <div className={styles.sideLink} onClick={openTelegram}>
           <div className={styles.innerSideLink}>
@@ -168,22 +190,6 @@ export default function SideNav() {
             <h1>Join telegram</h1>
           </div>
         </div>
-        <Link href="/page/terms" className={styles.sideLink}>
-          <div
-            className={`${styles.innerSideLink} ${
-              pathname === "/page/terms" || pathname.startsWith("/page/terms/")
-                ? styles.activeLink
-                : ""
-            }`}
-          >
-            <TermsIcon
-              alt="terms icon"
-              aria-label="terms icon"
-              className={styles.linkIcon}
-            />
-            <h1>Terms</h1>
-          </div>
-        </Link>
         <Link href="/page/about" className={styles.sideLink}>
           <div
             className={`${styles.innerSideLink} ${
@@ -198,6 +204,22 @@ export default function SideNav() {
               className={styles.linkIcon}
             />
             <h1>About</h1>
+          </div>
+        </Link>
+        <Link href="/page/terms" className={styles.sideLink}>
+          <div
+            className={`${styles.innerSideLink} ${
+              pathname === "/page/terms" || pathname.startsWith("/page/terms/")
+                ? styles.activeLink
+                : ""
+            }`}
+          >
+            <TermsIcon
+              alt="terms icon"
+              aria-label="terms icon"
+              className={styles.linkIcon}
+            />
+            <h1>Terms</h1>
           </div>
         </Link>
       </div>

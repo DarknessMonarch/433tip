@@ -22,7 +22,7 @@ export default function MobileFilter() {
   const [country, setCountry] = useState(searchParams.get("country") || "");
 
   const countryData = ["Europe", "Kenya", "South Africa"];
-  const leagueData = ["Europa", "Copa America", "Bundesliga"];
+  const leagueData = ["Europa", "Copa America", "Bundesliga",];
 
   const currentDate = date.format(new Date(), "DD-MM-YYYY");
 

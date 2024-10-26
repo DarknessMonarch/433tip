@@ -16,15 +16,30 @@
     display: grid;
     overflow: hidden;
     overflow-y: auto;
+    min-height: 600px;
     overflow-x: hidden;
+  }
+
+  .emptyCard {
+    width: 100%;
+    min-width: 0;
+    height: 350px;
+    border-radius: 15px;
+    border: 1px solid var(--primary-light-color);
   }
 }
 
 /* using it as global style for larger devices  */
 @media only screen and (min-width: 48em) {
   .content {
+    min-height: auto;
     grid-template-columns: repeat(2, minmax(300px, 1fr));
   }
+
+  .emptyCard {
+    height: 410px;
+  }
+  
 }
 
 /* ipad pro screens & laptop */

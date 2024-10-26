@@ -64,7 +64,9 @@ export default function NavbarComponent() {
   }, []);
 
   const isSearchablePage =
-    pathname === "/page/football" || pathname === "/page/otherSport" || pathname === "/page/vip";
+    pathname === "/page/football" ||
+    pathname === "/page/otherSport" ||
+    pathname === "/page/vip";
 
   const performSearch = useMemo(
     () =>
@@ -82,8 +84,9 @@ export default function NavbarComponent() {
 
   useEffect(() => {
     performSearch(search.trim());
+
     return () => performSearch.cancel();
-  }, [search, performSearch]);
+  }, [search, performSearch, isSearchablePage]);
 
   const handleInputChange = useCallback((event) => {
     setSearch(event.target.value);
@@ -131,7 +134,7 @@ export default function NavbarComponent() {
               onChange={handleInputChange}
               className={styles.desktopSearch}
             />
-          ) : isAuth && !isMobile  ? (
+          ) : isAuth && !isMobile ? (
             <div className={styles.userProfile}>
               <Image
                 src={profile}
@@ -167,7 +170,6 @@ export default function NavbarComponent() {
                 />
                 <h1 className={styles.username}>
                   {username} <span>({status})</span>
-                  
                 </h1>
               </div>
             )}

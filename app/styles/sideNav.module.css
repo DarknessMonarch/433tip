@@ -79,7 +79,6 @@
   }
 
   .innerSideLink h1 {
-    font-family: var(--font-outfit-extralight);
     background-color: var(--tertiary-color);
     color: var(--primary-color);
     border-radius: 6px;
