@@ -13,12 +13,12 @@ RUN \
   else echo "Lockfile not found." && exit 1; \
   fi
 
-
 FROM base AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-COPY .env.production.sample .env.production
+
+ENV NODE_OPTIONS="--max-old-space-size=4096"
 RUN npm run build
 
 FROM base AS runner
@@ -41,5 +41,3 @@ EXPOSE 3000
 ENV PORT=3000
 
 CMD ["node", "server.js"]
-
-
